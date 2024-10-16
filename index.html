@@ -28,18 +28,23 @@
 
 Telegram Mini App Tests<br/>
 
-
+ <button onclick="TMAgetuserInfo()">TMA获取进入小程序的用户TG信息</button>
 <button onclick="TMAshare()">TMA分享功能</button>
 <button onclick="TMACall()">TMA电话呼叫</button>
+
 <script>
+     function TMAgetuserInfo(){
+        alert(window.Telegram.WebApp.initDataUnsafe.id)
+        
+    }
     function TMAshare(){
         window.location.href="https://telegram.me/share/url?url=https://base64.us/"
         
     }
     function TMACall(){
        
-         // window.Telegram.WebApp.requestContact();
-        alert(window.Telegram.WebApp.initDataUnsafe.id)
+         window.Telegram.WebApp.requestContact();
+       
     }
 </script>
 
