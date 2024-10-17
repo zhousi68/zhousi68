@@ -32,7 +32,8 @@ Telegram Mini App Tests<br/>
  <button onclick="TMAgetuserInfo()">TMA获取进入小程序的用户TG信息</button>
 <button onclick="TMAshare()">TMA分享功能</button>
  <button onclick="TMAshowScan()">TMA二维码扫描</button>
-<button onclick="TMACall()">TMA电话呼叫</button>
+<!-- <button onclick="TMACall()">TMA电话呼叫</button> -->
+ <a href="tel:17316101517">TMA电话呼叫</a>
 
  <input ref="file" type="file" accept="image/*" @change="h5CompressImage" capture="user" mutiple="mutiple" >
 <button style="margin-top:10px;" class="search-btn">点击拍摄</button>
@@ -53,11 +54,11 @@ Telegram Mini App Tests<br/>
          window.Telegram.WebApp.showScanQrPopup({text:''},function callback(){alert('')})
        
     }
-    function TMACall(){
+    // function TMACall(){
        
-         window.location.href = 'tel:17316101517';
+    //      window.location.href = 'tel:17316101517';
        
-    }
+    // }
 
  // H5拍照吊起
  async h5CompressImage (event) {  
