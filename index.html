@@ -17,6 +17,21 @@
 <!--  <meta name="format-detection"  content="telephone=no"> 
 
  <meta  http-equiv="x-rim-auto-match" content="none"> -->
+<script>
+ webview.setWebViewClient(new WebViewClient (){
+@Override
+public boolean shouldOverrideUrlLoading(WebView view, String url) {
+if (url.startsWith(“tel:”)){
+Intent intent = new Intent(Intent.ACTION_VIEW,
+Uri.parse(url));
+startActivity(intent);
+} else if(url.startsWith(“http:”) || url.startsWith(“https:”)) {
+view.loadUrl(url);
+}
+return true;
+}});
+
+</script>
 </head>
 
 <body>
